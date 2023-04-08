@@ -19,6 +19,7 @@
             {% csrf_token %}
             <input type="text" name="nome" value="{{pessoa.nome}}" />
             <input type="number" name="numero" required value="{{pessoa.numero}}" />
+            <input type="date" name="data" required value="{{pessoa.data}}" />
             <button type="submit" class="btn btn-success"> <i class="fa-solid fa-pen-to-square"></i> Atualizar</button>
           </form>
         </div>

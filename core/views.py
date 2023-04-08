@@ -1,32 +1,35 @@
 from django.shortcuts import render, redirect
-from .models import OrdemdeProducao
+from .models import Pessoa
 
 def home (request):
-    pessoas = OrdemdeProducao.objects.all()
+    pessoas = Pessoa.objects.all()
     return render(request, "index.html", {"pessoas": pessoas}) 
 
 def salvar(request):
     vnome = request.POST.get("nome")
     vnumero = request.POST.get("numero")
-    OrdemdeProducao.objects.create(nome=vnome, numero=vnumero)
-    pessoas = OrdemdeProducao.objects.all()
+    vdate = request.POST.get("data")
+    Pessoa.objects.create(nome=vnome, numero=vnumero, data=vdate)
+    pessoas = Pessoa.objects.all()
     return render(request, "index.html", {"pessoas": pessoas})
 
 def editar(request, id):
-    pessoa = OrdemdeProducao.objects.get(id=id)
+    pessoa = Pessoa.objects.get(id=id)
     return render(request, 'update.html', {"pessoa": pessoa})
 
 def update(request, id):
     vnome = request.POST.get("nome")
     vnumero = request.POST.get("numero")
-    pessoa = OrdemdeProducao.objects.get(id=id)
+    vdate = request.POST.get("data")
+    pessoa = Pessoa.objects.get(id=id)
     pessoa.nome = vnome
     pessoa.numero = vnumero
+    pessoa.data = vdate
     pessoa.save()
     return redirect(home)
 
 def delete (request, id):
-    pessoa = OrdemdeProducao.objects.get(id=id)
+    pessoa = Pessoa.objects.get(id=id)
     pessoa.delete()
     return redirect(home)
 

@@ -1,8 +1,7 @@
 from django.db import models
+from datetime import date
 
-# Create your models here.
-class OrdemdeProducao(models.Model):
+class Pessoa(models.Model):
     nome = models.CharField(max_length=100)
     numero = models.IntegerField(null=True)
-
-    
+    data = models.DateField(default=date.today)

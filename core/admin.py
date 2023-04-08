@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import OrdemdeProducao
+from .models import Pessoa
 # Register your models here.
 
-admin.site.register(OrdemdeProducao)
+admin.site.register(Pessoa)
