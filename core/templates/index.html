@@ -40,8 +40,23 @@
             <tr>
                {% for pessoa in pessoas %}
                <td>{{ pessoa.data }}</td>
-               <td>{{ pessoa.nome }}</td>
-               <td>{{ pessoa.numero }}</td>
+               <td>{{ pessoa.op }}</td>
+               <td>{{ pessoa.article }}</td>
+               <td>{{ pessoa.nf_fornecida }}</td>
+               <td>{{ pessoa.nf_ret }}</td>
+               <td>{{ pessoa.nf_ind }}</td>
+               <td>{{ pessoa.total_received }}</td>
+               <td>{{ pessoa.first_quality }}</td>
+               <td>{{ pessoa.second_quality }}</td>
+               <td>{{ pessoa.third_quality }}</td>
+               <td>{{ pessoa.timemoney }}</td>
+               <td>{{ pessoa.value_pieces }}</td>
+               <td>{{ pessoa.total_value }}</td>
+               <td>{{ pessoa.payment_confirmed }}</td>
+               <td>{{ pessoa.date_shipment }}</td>
+               <td>{{ pessoa.approval_date }}</td>
+               <td>{{ pessoa.preview_payment }}</td>
+               <td>{{ pessoa.date_payment }}</td>
                <div class="buttons">
                <td> <a href="{% url 'editar' pessoa.id %}" class="btn btn-warning"><i class="bi bi-pencil-square"> </i></a>
                   <a href="{% url 'delete' pessoa.id %}" class="btn btn-danger"><i class="bi bi-trash3-fill"></i></a>

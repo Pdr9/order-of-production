@@ -1,28 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    {% load static %}
-    <link rel="stylesheet" href="{% static 'css/style.css' %}">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
-</head>
-<body>
-    <div class="conteiner">
+   <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Document</title>
+      {% load static %}
+      <link rel="stylesheet" href="{% static 'css/style.css' %}">
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+   </head>
+   <body>
+      <div class="conteiner">
          <div class="col-md-5 offset-md-3 mt-5">
             <div class="jumbotron">
-             <form action="{% url 'salvar' %}" method="POST">
-              {% csrf_token %}
-              <h2>Digite as informações</h2>
-              <input type="text" name="nome" id="" placeholder="nome" required/>
-              <input type="number" name="numero" id="" placeholder="idade" required>
-              <input type="date" name="date" id="" placeholder="data de hoje" required>
-              <button type="submit" class="btn btn-success"> <i class="fa-solid fa-check"></i> Salvar</button>
+               <form action="{% url 'salvar' %}" method="POST">
+               {% csrf_token %}
+               <h2>Digite as informações</h2>
+               <h6>Data</h6>
+               <input type="date" name="data" id="" placeholder="DATA" required>
+               <h6>OP</h6>
+               <input type="number" name="op" id="" required placeholder="OP" required/>
+               <h6>Artigo</h6>
+               <input type="text" name="article" id="article" required placeholder="ARTIGO" required>
+               <h6>NF Fornecida:</h6>
+               <input type="number" name="nf_fornecida" required>
+               <h6>NF Ret:</h6>
+               <input type="number" name="nf_ret" required>
+               <h6>NF Ind:</h6>
+               <input type="number" name="nf_ind" required>
+               <h6>Total Received:</h6>
+               <input type="number" name="total_received" required>
+               <h6>First Quality:</h6>
+               <input type="number" name="first_quality" required>
+               <h6>Second Quality:</h6>
+               <input type="number" name="second_quality" required>
+               <h6>Third Quality:</h6>
+               <input type="number" name="third_quality" required>
+               <h6>Time Money:</h6>
+               <input type="number" name="timemoney" step="0.01" required>
+               <h6>Value Pieces:</h6>
+               <input type="number" name="value_pieces" step="0.01" required>
+               <h6>Total Value:</h6>
+               <input type="number" name="total_value" step="0.01" required>
+               <h6>Payment Confirmed:</h6>
+               <input type="checkbox" name="payment_confirmed">
+               <h6>Date Shipment:</h6>
+               <input type="date" name="date_shipment" required>
+               <h6>Approval Date:</h6>
+               <input type="date" name="approval_date" required>
+               <h6>Preview Payment:</h6>
+               <input type="date" name="preview_payment" required>
+               <h6>Date Payment:</h6>
+               <input type="date" name="date_payment" required>
+               <button type="submit" class="btn btn-success"> <i class="fa-solid fa-check"></i> Salvar</button>
             </div>
-        </div>
-    </div>
-</body>
+         </div>
+      </div>
+   </body>
 </html>

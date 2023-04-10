@@ -17,10 +17,43 @@
           <h2>Digite as informações</h2>
           <form action="{% url 'update' pessoa.id %}" method="POST">
             {% csrf_token %}
-            <input type="text" name="nome" value="{{pessoa.nome}}" />
-            <input type="number" name="numero" required value="{{pessoa.numero}}" />
-            <input type="date" name="data" required value="{{pessoa.data}}" />
-            <button type="submit" class="btn btn-success"> <i class="fa-solid fa-pen-to-square"></i> Atualizar</button>
+            <h6>Data</h6>
+               <input type="date" name="data" id="" placeholder="DATA" required value="{{pessoa.data}}">
+               <h6>OP</h6>
+               <input type="number" name="op" id="" required placeholder="OP" required value="{{pessoa.op}}"/>
+               <h6>Artigo</h6>
+               <input type="text" name="article" id="article" required placeholder="ARTIGO" required value="{{pessoa.article}}">
+               <h6>NF Fornecida:</h6>
+               <input type="number" name="nf_fornecida" required value="{{pessoa.nf_fornecida}}">
+               <h6>NF Ret:</h6>
+               <input type="number" name="nf_ret" required value="{{pessoa.nf_ret}}">
+               <h6>NF Ind:</h6>
+               <input type="number" name="nf_ind" required value="{{pessoa.nf_ind}}">
+               <h6>Total Received:</h6>
+               <input type="number" name="total_received" required value="{{pessoa.total_received}}">
+               <h6>First Quality:</h6>
+               <input type="number" name="first_quality" required value="{{pessoa.first_quality}}">
+               <h6>Second Quality:</h6>
+               <input type="number" name="second_quality" required value="{{pessoa.second_quality}}">
+               <h6>Third Quality:</h6>
+               <input type="number" name="third_quality" required value="{{pessoa.third_quality}}">
+               <h6>Time Money:</h6>
+               <input type="number" name="timemoney" step="0.01" required value="{{pessoa.timemoney}}">
+               <h6>Value Pieces:</h6>
+               <input type="number" name="value_pieces" step="0.01" required value="{{pessoa.value_pieces}}">
+               <h6>Total Value:</h6>
+               <input type="number" name="total_value" step="0.01" required value="{{pessoa.total_value}}">
+               <h6>Payment Confirmed:</h6>
+               <input type="checkbox" name="payment_confirmed" value="{{pessoa.payment_confirmed}}">
+               <h6>Date Shipment:</h6>
+               <input type="date" name="date_shipment" required value="{{pessoa.date_shipment}}">
+               <h6>Approval Date:</h6>
+               <input type="date" name="approval_date" required value="{{pessoa.approval_date}}">
+               <h6>Preview Payment:</h6>
+               <input type="date" name="preview_payment" required value="{{pessoa.preview_payment}}">
+               <h6>Date Payment:</h6>
+               <input type="date" name="date_payment" required value="{{pessoa.date_payment}}">
+               <button type="submit" class="btn btn-success"> <i class="fa-solid fa-pen-to-square"></i> Atualizar</button>
           </form>
         </div>
       </div>
