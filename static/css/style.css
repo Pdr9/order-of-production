@@ -7,3 +7,7 @@ td,
 th {
   padding: 0.5rem;
 }
+
+select{
+  margin-left: 5px;
+}
