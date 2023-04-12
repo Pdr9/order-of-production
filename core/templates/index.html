@@ -1,4 +1,6 @@
 {% load static %}
+{% load humanize %}
+
 <!DOCTYPE html>
 <html lang="en">
    <head>
@@ -39,7 +41,7 @@
          <tbody>
             <tr>
                {% for pessoa in pessoas %}
-               <td>{{ pessoa.data }}</td>
+               <td>{{ pessoa.data|date:"d/m/Y"}}</td>
                <td>{{ pessoa.op }}</td>
                <td>{{ pessoa.article }}</td>
                <td>{{ pessoa.nf_fornecida }}</td>
@@ -49,14 +51,14 @@
                <td>{{ pessoa.first_quality }}</td>
                <td>{{ pessoa.second_quality }}</td>
                <td>{{ pessoa.third_quality }}</td>
-               <td>{{ pessoa.timemoney }}</td>
-               <td>{{ pessoa.value_pieces }}</td>
-               <td>{{ pessoa.total_value }}</td>
-               <td>{{ pessoa.payment_confirmed }}</td>
-               <td>{{ pessoa.date_shipment }}</td>
-               <td>{{ pessoa.approval_date }}</td>
-               <td>{{ pessoa.preview_payment }}</td>
-               <td>{{ pessoa.date_payment }}</td>
+               <td>R$ {{ pessoa.timemoney|floatformat:2 }}</td>
+               <td>R$ {{ pessoa.value_pieces|floatformat:2 }}</td>
+               <td>R$ {{ pessoa.total_value|floatformat:2|intcomma }}</td>
+               <td>{{ pessoa.payment_status }}</td>
+               <td>{{ pessoa.date_shipment|date:"d/m/Y" }}</td>
+               <td>{{ pessoa.approval_date|date:"d/m/Y" }}</td>
+               <td>{{ pessoa.preview_payment|date:"d/m/Y" }}</td>
+               <td>{{ pessoa.date_payment|date:"d/m/Y" }}</td>
                <div class="buttons">
                <td> <a href="{% url 'editar' pessoa.id %}" class="btn btn-warning"><i class="bi bi-pencil-square"> </i></a>
                   <a href="{% url 'delete' pessoa.id %}" class="btn btn-danger"><i class="bi bi-trash3-fill"></i></a>

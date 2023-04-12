@@ -1,6 +1,8 @@
 from pathlib import Path
 import os
 from django.conf import settings
+import locale
+locale.setlocale(locale.LC_ALL, 'pt_BR.UTF-8')
 
 
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -12,16 +14,17 @@ DEBUG = True
 ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
-    'django.contrib.admin',
-    'django.contrib.auth',
-    'django.contrib.contenttypes',
-    'django.contrib.sessions',
-    'django.contrib.messages',
-    'django.contrib.staticfiles',
-    'core',
-    'crispy_forms'
-]
+        'django.contrib.admin',
+        'django.contrib.auth',
+        'django.contrib.contenttypes',
+        'django.contrib.sessions',
+        'django.contrib.messages',
+        'django.contrib.staticfiles',
+        'core',
+        'crispy_forms',
+        'django.contrib.humanize',]
 
+DATE_INPUT_FORMATS = ['%d/%m/%Y', '%d/%m/%y']
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',

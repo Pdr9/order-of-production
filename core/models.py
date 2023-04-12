@@ -16,7 +16,7 @@ class Pessoa(models.Model):
     timemoney = models.DecimalField(max_digits=10, decimal_places=2, default=0)
     value_pieces = models.DecimalField(max_digits=10, decimal_places=2, default=0)
     total_value = models.DecimalField(max_digits=10, decimal_places=2, default=0)
-    payment_confirmed = models.BooleanField(default=False)
+    payment_status = models.CharField(max_length=12)
     date_shipment = models.DateField(default=date.today)
     approval_date = models.DateField(default=date.today)
     preview_payment = models.DateField(default=date.today)

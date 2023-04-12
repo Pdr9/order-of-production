@@ -43,8 +43,13 @@
                <input type="number" name="value_pieces" step="0.01" required value="{{pessoa.value_pieces}}">
                <h6>Total Value:</h6>
                <input type="number" name="total_value" step="0.01" required value="{{pessoa.total_value}}">
-               <h6>Payment Confirmed:</h6>
-               <input type="checkbox" name="payment_confirmed" value="{{pessoa.payment_confirmed}}">
+               <h6>Status do pagamento</h6>
+               <select name="payment_status">
+                  <option value="aprovada">Aprovada</option>
+                  <option value="reprovada">Reprovada</option>
+                  <option value="adiantada">Adiantada</option>
+                  <option value="aguardando pagamento">Aguardando Pagamento</option>
+               </select>
                <h6>Date Shipment:</h6>
                <input type="date" name="date_shipment" required value="{{pessoa.date_shipment}}">
                <h6>Approval Date:</h6>

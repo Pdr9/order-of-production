@@ -21,7 +21,7 @@ def salvar(request):
     timemoney = request.POST.get("timemoney")
     value_pieces = request.POST.get("value_pieces")
     total_value = request.POST.get("total_value")
-    payment_confirmed = request.POST.get("payment_confirmed") == "True"
+    payment_status = request.POST.get("payment_status")
     date_shipment = request.POST.get("date_shipment")
     approval_date = request.POST.get("approval_date")
     preview_payment = request.POST.get("preview_payment")
@@ -41,7 +41,7 @@ def salvar(request):
         timemoney=timemoney,
         value_pieces=value_pieces,
         total_value=total_value,
-        payment_confirmed=payment_confirmed,
+        payment_status=payment_status,
         date_shipment=date_shipment,
         approval_date=approval_date,
         preview_payment=preview_payment,
@@ -69,7 +69,7 @@ def update(request, id):
     timemoney = request.POST.get("timemoney")
     value_pieces = request.POST.get("value_pieces")
     total_value = request.POST.get("total_value")
-    payment_confirmed = request.POST.get("payment_confirmed")
+    payment_status = request.POST.get("payment_status")
     date_shipment = request.POST.get("date_shipment")
     approval_date = request.POST.get("approval_date")
     preview_payment = request.POST.get("preview_payment")
@@ -89,7 +89,7 @@ def update(request, id):
     pessoa.timemoney  = timemoney
     pessoa.value_pieces = value_pieces
     pessoa.total_value = total_value
-    pessoa.payment_confirmed = payment_confirmed
+    pessoa.payment_status = payment_status
     pessoa.date_shipment = date_shipment
     pessoa.approval_date = approval_date
     pessoa.preview_payment = preview_payment

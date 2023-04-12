@@ -8,7 +8,7 @@ if defined _OLD_CODEPAGE (
     "%SystemRoot%\System32\chcp.com" 65001 > nul
 )
 
-set VIRTUAL_ENV=C:\Users\Pedro\OneDrive\Área de Trabalho\CRUD DJANGO\venv
+set VIRTUAL_ENV=C:\Users\Pedro\OneDrive\Área de Trabalho\PROJETO DJANGO\order-of-production\venv
 
 if not defined PROMPT set PROMPT=$P$G
 

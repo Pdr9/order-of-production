@@ -3,7 +3,7 @@ from django.urls import path, include
 from .views import home, salvar, editar, update, delete, create
 
 urlpatterns = [
-    path('', home),
+    path('', home, name='home'),
     path('create/', create, name='create'),
     path('salvar', salvar, name="salvar"),
     path('editar/<int:id>', editar, name='editar'),
