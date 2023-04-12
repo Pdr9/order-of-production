@@ -17,8 +17,8 @@
           <h2>Digite as informações</h2>
           <form action="{% url 'update' pessoa.id %}" method="POST">
             {% csrf_token %}
-            <h6>Data</h6>
-               <input type="date" name="data" id="" placeholder="DATA" required value="{{pessoa.data}}">
+               <h6>Data</h6>
+               <input type="date" name="data" id="" placeholder="data" required value="{{ pessoa.data|date:'Y-m-d' }}">
                <h6>OP</h6>
                <input type="number" name="op" id="" required placeholder="OP" required value="{{pessoa.op}}"/>
                <h6>Artigo</h6>
@@ -51,13 +51,13 @@
                   <option value="aguardando pagamento">Aguardando Pagamento</option>
                </select>
                <h6>Date Shipment:</h6>
-               <input type="date" name="date_shipment" required value="{{pessoa.date_shipment}}">
+               <input type="date" name="date_shipment" required value="{{ pessoa.date_shipment|date:'Y-m-d' }}">
                <h6>Approval Date:</h6>
-               <input type="date" name="approval_date" required value="{{pessoa.approval_date}}">
+               <input type="date" name="approval_date" required value="{{pessoa.approval_date|date:'Y-m-d'}}">
                <h6>Preview Payment:</h6>
-               <input type="date" name="preview_payment" required value="{{pessoa.preview_payment}}">
+               <input type="date" name="preview_payment" required value="{{pessoa.preview_payment|date:'Y-m-d'}}">
                <h6>Date Payment:</h6>
-               <input type="date" name="date_payment" required value="{{pessoa.date_payment}}">
+               <input type="date" name="date_payment" required value="{{pessoa.date_payment|date:'Y-m-d'}}">
                <button type="submit" class="btn btn-success"> <i class="fa-solid fa-pen-to-square"></i> Atualizar</button>
           </form>
         </div>
