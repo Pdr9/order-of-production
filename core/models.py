@@ -1,5 +1,4 @@
 from django.db import models
-from datetime import datetime
 from datetime import date
 
 class Pessoa(models.Model):

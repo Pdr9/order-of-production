@@ -15,51 +15,11 @@
       <div class="conteiner">
          <div class="col-md-5 offset-md-3 mt-5">
             <div class="jumbotron">
-               <form action="{% url 'salvar' %}" method="POST">
+               <form action="{% url 'create' %}" method="POST">
                {% csrf_token %}
-               <h2>Digite as informações</h2>
-               <h6>Data</h6>
-               <input type="date" name="data" id="" placeholder="DATA" required>
-               <h6>OP</h6>
-               <input type="number" name="op" id="" required placeholder="OP" required/>
-               <h6>Artigo</h6>
-               <input type="text" name="article" id="article" required placeholder="ARTIGO" required>
-               <h6>NF Fornecida:</h6>
-               <input type="number" name="nf_fornecida" required>
-               <h6>NF Ret:</h6>
-               <input type="number" name="nf_ret" required>
-               <h6>NF Ind:</h6>
-               <input type="number" name="nf_ind" required>
-               <h6>Total Received:</h6>
-               <input type="number" name="total_received" required>
-               <h6>First Quality:</h6>
-               <input type="number" name="first_quality" required>
-               <h6>Second Quality:</h6>
-               <input type="number" name="second_quality" required>
-               <h6>Third Quality:</h6>
-               <input type="number" name="third_quality" required>
-               <h6>Time Money:</h6>
-               <input type="number" name="timemoney" step="0.01" required>
-               <h6>Value Pieces:</h6>
-               <input type="number" name="value_pieces" step="0.01" required>
-               <h6>Total Value:</h6>
-               <input type="number" name="total_value" step="0.01" required>
-               <h6>Payment Status:</h6>
-               <select name="payment_status">
-                  <option value="APROVADA">Aprovada</option>
-                  <option value="REPROVADA">Reprovada</option>
-                  <option value="ADIANTADA">Adiantada</option>
-                  <option value="AGUARDANDO">Aguardando Pagamento</option>
-               </select>
-               <h6>Date Shipment:</h6>
-               <input type="date" name="date_shipment" required>
-               <h6>Approval Date:</h6>
-               <input type="date" name="approval_date" required>
-               <h6>Preview Payment:</h6>
-               <input type="date" name="preview_payment" required>
-               <h6>Date Payment:</h6>
-               <input type="date" name="date_payment" required>
+               {{ form.as_div }}
                <button type="submit" class="btn btn-success"> <i class="fa-solid fa-check"></i> Salvar</button>
+               </form>
             </div>
          </div>
       </div>

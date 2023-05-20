@@ -62,7 +62,7 @@
                <td>{{ pessoa.preview_payment|date:"d/m/Y" }}</td>
                <td>{{ pessoa.date_payment|date:"d/m/Y" }}</td>
                <div class="buttons">
-               <td> <a href="{% url 'editar' pessoa.id %}" class="btn btn-warning"><i class="bi bi-pencil-square"> </i></a>
+               <td> <a href="{% url 'update' pessoa.id %}" class="btn btn-warning"><i class="bi bi-pencil-square"> </i></a>
                   <a href="{% url 'delete' pessoa.id %}" class="btn btn-danger"><i class="bi bi-trash3-fill"></i></a>
                </td>
             </tr>
