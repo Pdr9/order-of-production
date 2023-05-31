@@ -22,7 +22,8 @@ INSTALLED_APPS = [
         'django.contrib.staticfiles',
         'core',
         'crispy_forms',
-        'django.contrib.humanize',]
+        'django.contrib.humanize',
+]
 
 DATE_INPUT_FORMATS = ['%d/%m/%Y', '%d/%m/%y']
 
