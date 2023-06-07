@@ -39,3 +39,54 @@ th {
     padding: 16px;
     height: 1000px; /* Apenas para fins de demonstração */
 }
+
+.table-excel {
+  border-collapse: collapse;
+  width: 100%;
+}
+.table-excel td, .table-excel th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+.table-excel th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+}
+.table-excel thead th {
+  text-align: left;
+}
+.table-excel tbody td {
+  text-align: center;
+}
+.table-excel tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+.table-excel {
+  border-collapse: collapse;
+  width: 10%;
+  font-family: Arial, sans-serif;
+  margin-bottom: 2px;
+}
+
+.table-excel td, .table-excel th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+.table-excel th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+}
+
+.table-excel thead th {
+  text-align: left;
+}
+
+.table-excel tbody td {
+  text-align: center;
+}
+
+.table-excel tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}

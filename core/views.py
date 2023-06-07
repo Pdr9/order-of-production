@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect
 from .models import Pessoa
 from .forms import AddForm
+
 def minha_view(request):
     print(request.POST)
 
@@ -39,3 +40,7 @@ def delete (request, id):
     pessoa = Pessoa.objects.get(id=id)
     pessoa.delete()
     return redirect(home)
+
+
+def exibir_pagina(request):
+    return render(request, 'order-of-production/real_time_production.html')
