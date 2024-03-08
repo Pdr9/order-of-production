@@ -43,4 +43,4 @@ def delete (request, id):
 
 
 def exibir_pagina(request):
-    return render(request, 'order-of-production/real_time_production.html')
+    return render(request, 'real_time_production/real_time_production.html')
