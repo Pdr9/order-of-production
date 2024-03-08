@@ -91,3 +91,11 @@ th {
 .table-excel tbody tr:nth-child(even) {
   background-color: #f9f9f9;
 }
+
+.table-container {
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Adicionando para centralizar verticalmente */
+  height: 100vh; /* Altura igual à altura da tela */
+  
+}
